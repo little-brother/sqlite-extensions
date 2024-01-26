@@ -1,0 +1,22 @@
+[
+	{
+		"type": "function",
+		"signature": "uuid ()",
+		"description": "Generate a version 4 UUID as a string.",
+		"example": "select uuid(); --> 0b3fb911-feba-47cf-af8a-e2094aec9f6f"
+	},
+	{
+		"type": "function",
+		"signature": "uuid_str()",
+		"description": "Convert an uuid into a well-formed UUID string.",
+		"example": "select uuid_str('0b3fb911feba47cfaf8ae2094aec9f6f'); --> 0b3fb911-feba-47cf-af8a-e2094aec9f6f",
+		"args": "uuid"
+	},
+	{
+		"type": "function",
+		"signature": "uuid_blob(uuid)",
+		"description": "Convert an uuid into a 16-byte blob.",
+		"example": "select uuid_blob('0b3fb911-feba-47cf-af8a-e2094aec9f6f'); --> Blob, 16b",
+		"args": "uuid"
+	}
+]

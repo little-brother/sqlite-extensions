@@ -1,0 +1,8 @@
+{
+	"name": "series",
+	"brief": "Simple sequence generator as a table",
+	"description": "One table-valued-function, that returns sequence of values.",
+	"version": "1.0.0",
+	"author": "D. Richard Hipp",
+	"homepage": "https://www3.sqlite.org/src/file?name=ext/misc/series.c"
+}

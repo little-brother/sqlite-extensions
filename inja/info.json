@@ -1,0 +1,8 @@
+{
+	"name": "inja",
+	"brief": "Mustache template parser",
+	"description": "Mustache jinia-like template parser. sqlite-gui uses it non-directly for scripting. Check Wiki for details.",
+	"version": "1.0.0",
+	"author": "little-brother",
+	"homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/inja"
+}

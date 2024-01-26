@@ -1,0 +1,9 @@
+[
+	{
+		"type": "module",
+		"signature": "xlite(filename, worksheet, [, range, colnames])",
+		"description": "Create virtual tables over Excel and ODS spreadsheets",
+		"example": "create virtual table test_data using xlite (filename 'D:/MyBook.xlsx', worksheet 'sheet1', range 'A2:F', colnames '1');",
+		"args": "filename|worksheet|range|colnames"
+	}
+]

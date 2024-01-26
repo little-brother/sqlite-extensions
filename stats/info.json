@@ -1,0 +1,8 @@
+{
+	"name": "stats",
+	"brief": "Common statistical functions",
+	"description": "Common statistical functions.",
+	"version": "1.0.0",
+	"author": "Liam Healy, Anton Zhiyanov (nalgeon)",
+	"homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/stats.md"
+}

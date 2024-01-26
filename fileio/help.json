@@ -1,0 +1,23 @@
+[
+	{
+		"type": "function",
+		"signature": "readfile(path, data [, mode [, mtime]])",
+		"description": "Read and return the contents of file as BLOB from disk",
+		"example": "select readfile('D:/data.txt'); --> BLOB",
+		"args": "path"
+	},
+	{
+		"type": "function",
+		"signature": "writefile(path, data [, mode [, mtime]])",
+		"description": "Write blob DATA to file. If successful, the number of bytes written is returned. If an error occurs, NULL is returned.",
+		"example": "select writefile('D:/data.txt', 'Hello world'); --> 11",
+		"args": "path|data|mode|mtime"
+	},
+	{
+		"type": "module",
+		"signature": "fsdir(path [, dir])",
+		"description": "Return one row for the directory, and one row for each file within the hierarchy rooted at path.",
+		"example": "select * from fsdir('C:/Temp');",
+		"args": "path|dir"
+	}
+]

@@ -1,0 +1,8 @@
+{
+	"name": "uuid",
+	"brief": "Functions for UUIDs",
+	"description": "Functions that handling RFC-4122 UUIDs.",
+	"version": "1.0.0",
+	"author": "D. Richard Hipp",
+	"homepage": "https://sqlite.org/src/file/ext/misc/uuid.c"
+}

@@ -1,0 +1,185 @@
+[
+	{
+		"type": "function",
+		"signature": "text_substring(str, start [,length])",
+		"description": "Extract a substring of length characters starting at the start position (1-based). By default, extracts all characters from start to the end of the string.",
+		"example": "select text_substring('hello world', 7); --> world\nselect text_substring('hello world', 7, 3); --> wor",
+		"args": "str|start|length"
+	},
+	{
+		"type": "function",
+		"signature": "text_slice(str, start [,end])",
+		"description": "Extract a substring from the start position inclusive to the end position non-inclusive (1-based). By default, `end` is the end of the string. Both 'start' and 'end' can be negative, in which case they are counted from the end of the string toward the beginning of the string.",
+		"example": "select text_slice('hello world', 7); --> world\nselect text_slice('hello world', 7, 12); --> world\nselect text_slice('hello world', -5); --> world\nselect text_slice('hello world', -5, -2); --> wor",
+		"args": "str|start|end"
+	},
+	{
+		"type": "function",
+		"signature": "text_left(str, length)",
+		"description": "Extract a substring of length characters from the beginning of the string. For negative length, extracts all but the last length-characters.",
+		"example": "select text_left('hello world', 5); --> hello\nselect text_left('hello world', -6); --> hello",
+		"args": "str|length"
+	},
+	{
+		"type": "function",
+		"signature": "text_right(str, length)",
+		"description": "Extract a substring of length characters from the end of the string. For negative length, extracts all but the first length-characters.",
+		"example": "select text_right('hello world', 5); --> world\nselect text_right('hello world', -6); --> world",
+		"args": "str|length"
+	},
+	{
+		"type": "function",
+		"signature": "text_index(str, other)",
+		"description": "Return the first index of the other substring in the original string.",
+		"example": "select text_index('hello yellow', 'ello'); --> 2\nselect text_index('hello yellow', 'x'); --> 0",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_last_index(str, other)",
+		"description": "Return the last index of the other substring in the original string.",
+		"example": "select text_last_index('hello yellow', 'ello'); --> 8\nselect text_last_index('hello yellow', 'x'); --> 0",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_contains(str, other)",
+		"description": "Check if the string contains the other substring.",
+		"example": "select text_contains('hello yellow', 'ello'); --> 1\nselect text_contains('hello yellow', 'x'); --> 0",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_has_prefix(str, other)",
+		"description": "Check if the string starts with the `other` substring.",
+		"example": "select text_has_suffix('hello yellow', 'hello'); --> 0\nselect text_has_suffix('hello yellow', 'yellow'); --> 1",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_has_prefix(str, other)",
+		"description": "Check if the string starts with the `other` substring.",
+		"example": "select text_has_suffix('hello yellow', 'hello'); --> 0\nselect text_has_suffix('hello yellow', 'yellow'); --> 1",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_has_suffix(str, other)",
+		"description": "Check if the string ends with the `other` substring.",
+		"example": "select text_has_suffix('hello yellow', 'hello'); --> 0\nselect text_has_suffix('hello yellow', 'yellow'); --> 1",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_count(str, other)",
+		"description": "Count how many times the `other` substring is contained in the original string.
+",
+		"example": "select text_count('hello yellow', 'ello'); --> 2\nselect text_count('hello yellow', 'x') = 0; --> 0",
+		"args": "str|other"
+	},
+	{
+		"type": "function",
+		"signature": "text_split(str, sep, n)",
+		"description": "Split a string by a separator and returns the n-th part (counting from one). When n is negative, return the n-th-from-last part.",
+		"example": "select text_split('one|two|three', '|', 2); --> two\nselect text_split('one|two|three', '|', -1); --> three\nselect text_split('one|two|three', ';', 2); --> (empty string)",
+		"args": "str|sep|n"
+	},
+	{
+		"type": "function",
+		"signature": "text_concat(str, ...)",
+		"description": "Concatenate strings and returns the resulting string. Null values are ignored.",
+		"example": "select text_concat('one', 'two', 'three'); --> onetwothree\nselect text_concat('one', null, 'three'); --> onethree",
+		"args": "str|str2|str3|str4|str5"
+	},
+	{
+		"type": "function",
+		"signature": "text_join(sep, str, ...)",
+		"description": "Join strings using the separator. Null values are ignored.",
+		"example": "select text_join('|', 'one', 'two'); --> one|two\nselect text_join('|', 'one', null, 'three'); --> one|three",
+		"args": "sep|str|str2|str3|str4|str5)"
+	},
+	{
+		"type": "function",
+		"signature": "text_repeat(str, count)",
+		"description": "Concatenate the string to itself a given number of times and returns the resulting string.",
+		"example": "select text_repeat('one', 3); --> oneoneone",
+		"args": "str|count"
+	},
+	{
+		"type": "function",
+		"signature": "text_ltrim(str [,chars])",
+		"description": "Trim certain characters (spaces by default) from the beginning of the string.",
+		"example": "select text_ltrim('  hello'); --> hello\nselect text_ltrim('273hello', '123456789'); --> hello",
+		"args": "str|chars"
+	},
+	{
+		"type": "function",
+		"signature": "text_rtrim(str [,chars])",
+		"description": "Trim certain characters (spaces by default) from the end of the string.",
+		"example": "select text_rtrim('hello  '); --> hello\nselect text_rtrim('hello273', '123456789'); --> hello",
+		"args": "str|chars"
+	},
+	{
+		"type": "function",
+		"signature": "text_trim(str [,chars])",
+		"description": "Trim certain characters (spaces by default) from the beginning and end of the string.",
+		"example": "select text_trim('  hello  '); --> hello\nselect text_trim('273hello273', '123456789'); --> hello",
+		"args": "str|chars"
+	},
+	{
+		"type": "function",
+		"signature": "text_lpad(str, length [,fill])",
+		"description": "Pad the string to the specified length by prepending certain characters (spaces by default).",
+		"example": "select text_lpad('hello', 7, '*'); --> **hello",
+		"args": "str|length|fill"
+	},
+	{
+		"type": "function",
+		"signature": "text_rpad(str, length [,fill])",
+		"description": "Pad the string to the specified length by appending certain characters (spaces by default).",
+		"example": "select text_rpad('hello', 7, '*'); --> hello**",
+		"args": "str|length|fill"
+	},
+	{
+		"type": "function",
+		"signature": "text_replace(str, old, new [,count])",
+		"description": "Replace 'old' substrings with 'new' substrings in the original string, but not more than count times. By default, replaces all 'old' substrings.",
+		"example": "select text_replace('hello', 'l', '*'); --> he**o\nselect text_replace('hello', 'l', '*', 1); --> he*lo",
+		"args": "str|old|new|count"
+	},
+	{
+		"type": "function",
+		"signature": "text_translate(str, from, to)",
+		"description": "Replace each string character that matches a character in the 'from' set with the corresponding character in the to set. If 'from' is longer than 'to', occurrences of the extra characters in 'from' are deleted.",
+		"example": "select text_translate('hello', 'ol', '01'); --> he110\nselect text_translate('hello', 'ol', '0'); --> he0",
+		"args": "str|from|to"
+	},
+	{
+		"type": "function",
+		"signature": "text_reverse(str)",
+		"description": "Reverse the order of the characters in the string.",
+		"example": "select text_reverse('hello'); --> olleh",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "text_length(str)",
+		"description": "Return the number of characters in the string.",
+		"example": "select text_length('привет'); --> 6",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "text_size(str)",
+		"description": "Return the number of bytes in the string.",
+		"example": "select text_size('привет'); --> 12",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "text_bitsize(str)",
+		"description": "Return the number of bits in the string.",
+		"example": "select text_bitsize('one'); --> 24",
+		"args": "str"
+	}
+]

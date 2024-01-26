@@ -1,0 +1,8 @@
+{
+	"name": "ora",
+	"brief": "Some helper functions",
+	"description": "Some helper functions.",
+	"version": "1.0.0",
+	"author": "little-brother",
+	"homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/ora"
+}

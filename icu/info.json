@@ -1,0 +1,7 @@
+{
+	"name": "icu",
+	"brief": "Partial support for national symbols",
+	"description": "Add partial support for national symbols by redefinition lower and upper functions.",
+	"version": "1.0.0",
+	"homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/icu"
+}

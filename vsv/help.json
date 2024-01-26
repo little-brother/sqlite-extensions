@@ -1,0 +1,9 @@
+[
+	{
+		"type": "module",
+		"signature": "vsv(filename, ...)",
+ 		"description": "Create a virtual table over the file defined by filename. Another parameters can be provided: data (string) is alternative data, schema is alternate Schema to use, columns (integer) is column count, header (boolean) is whether or not a header row is present, skip (integer) is number of leading data rows to skip, rsep (string) is record separator, fsep (string) is field separator, validatetext (boolean) is validate UTF-8 encoding of text fields, affinity (one of: none, blob, text, integer, real, numeric) is   affinity to apply to each returned value, nulls (boolean) is empty fields are returned as NULL.",
+		"example": "create virtual table users using vsv(filename = users.csv, columns = 3)",
+		"args": "command|codepage"
+	}
+]

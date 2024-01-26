@@ -1,0 +1,8 @@
+{
+	"name": "crypto",
+	"brief": "Hashing, encoding and decoding functions",
+	"description": "Hashing, encoding and decoding functions.",
+	"version": "1.0.0",
+	"author": "Anton Zhiyanov (nalgeon)",
+	"homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/crypto.md"
+}

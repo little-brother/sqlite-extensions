@@ -1,0 +1,9 @@
+[
+	{
+		"type": "function",
+		"signature": "inja(template [, any , ...])",
+		"description": "Parse mustache jinia-like template. Argumens are available as argv.1, argv.2 and so on.",
+		"example": "select inja('select {{ argv.1 }}; select {{ argv.2 }}', 'a', 'b'); --> select a; select b;",
+		"args": "template|arg1|arg2|arg3|arg4|arg5"
+	}
+]

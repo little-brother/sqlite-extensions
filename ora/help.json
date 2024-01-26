@@ -1,0 +1,65 @@
+[
+	{
+		"type": "function",
+		"signature": "rownum(startBy)",
+		"description": "Return a row number in the resultset starting from a passed argument.",
+		"example": "select *, rownum(0) from mytable;",
+		"args": "startBy"
+	},
+	{
+		"type": "function",
+		"signature": "decode(expr, key1, value1, ke2, value2, ..., defValue)",
+		"description": "Compare expr to each key one by one. If expr is equal to a key, then returns the corresponding value.\nIf no match is found, then returns defValue. If defValue is omitted, then returns NULL.",
+		"example": "decode(1 < 2, false, 'NO', true, 'YES', '???'); --> YES",
+		"args": "expr|key1|value1|key2|value2|key3|value3|key4|value4|key5|value5"
+	},
+	{
+		"type": "function",
+		"signature": "crc32(str)",
+		"description": "Calculate crc32 checksum",
+		"example": "select crc32('hello'); --> 907060870",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "md5(str)",
+		"description": "Calculate md5 checksum",
+		"example": "select md5('hello'); --> 5d41402abc4b2a76b9719d911017c592",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "base64_encode (str)",
+		"description": "Encode the given string with base64.",
+		"example": "select base64_encode('foobar'); --> Zm9vYmFy",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "base64_decode (str)",
+		"description": "Decode a base64 encoded string.",
+		"example": "select base64_encode('Zm9vYmFy'); --> foobar",
+		"args": "str"
+	},
+	{
+		"type": "function",
+		"signature": "strpart(str, delimiter, partno)",
+		"description": "Return substring for a delimiter and a part number.",
+		"example": "select strpart('ab-cd-ef', '-', 2); --> 'cd'\nselect strpart('20.01.2021', '.', 3); --> 2021\nselect strpart('20-01/20/21', '-/', -2); --> 20\nselect strpart('D:/Docs/Book1.xls', '.', -2); --> Book1",
+		"args": "str|delimiter|partno"
+	},
+	{
+		"type": "function",
+		"signature": "conv(num, from_base, to_base)",
+		"description": "Return a string representation of convertion a number from one numeric base number system to another numeric base number system.\nThe minimum base is 2 and the maximum base is 36.\nOnly positive numbers are supported.",
+		"example": "select conv(15, 10, 2) --> 1111",
+		"args": "num|from_base|to_base"
+	},
+	{
+		"type": "function",
+		"signature": "tosize(nBytes)",
+		"description": "Return a human readable size.",
+		"example": "select tosize(1024); --> 1.00KB\nselect tosize(2 * 1024 * 1024); --> 2.00MB",
+		"args": "nBytes"	
+	}
+]

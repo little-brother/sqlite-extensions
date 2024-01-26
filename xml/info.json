@@ -1,0 +1,8 @@
+{
+	"name": "xml",
+	"brief": "Functions for manipulating XML",
+	"description": "Functions for managing XML content stored in an SQLite database as text. XPath 1.0 is used to obtain a data.",
+	"version": "1.0.0",
+	"author": "little-brother",
+	"homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/xml"
+}

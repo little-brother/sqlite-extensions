@@ -1,0 +1,44 @@
+[
+	{
+		"type": "function",
+		"signature": "xml_valid(xml)",
+		"description": "Return 1 if the argument is well-formed XML and 0, otherwise.",
+		"example": "select xml_valid('<a>A</a>'); --> 1\nselect xml_valid('<a>A/a>'); --> 0",
+		"args": "xml"
+	},
+	{
+		"type": "function",
+		"signature": "xml_extract(xml, xpath [, delim = ''])",
+		"description": "Extract a node content or an attribute value.",
+		"example": "select xml_extract('<a>A</a>', 'a'); --> <a>A</a>\nselect xml_extract('<a>A</a>', 'a/text()'); --> A\nselect xml_extract('<a>A</a><a>B</a>', 'a/text()', ','); --> A,B\nselect xml_extract('<a id = \"1\">A</a>', 'a/@id'); --> 1",
+		"args": "xml|xpath|delim"
+	},
+	{
+		"type": "function",
+		"signature": "xml_append(xml, xpath, insertion [, pos = 'after'])",
+		"description": "Append a node or an attribute based on the pos (one of 'first', 'before', 'after', 'last', 'child' or 'child first'/'child last').\nThe 'child' is ignored for the attribute. The insertion should be valid (there is no check).",
+		"example": "select xml_append('<a>A</a><a>B</a><a>C</a>', 'a[2]', '<b>D</b>', 'after') xml; --> <a>A</a><a>B</a><b>D</b><a>C</a>\nselect xml_append('<a>A</a><a>B</a><a>C</a>', 'a[2]', '<b>D</b>', 'child') xml; --> <a>A</a><a>B<b>D</b></a><a>C</a>\nselect xml_append('<a>A</a><a id=\"1\">B</a><a id=\"2\">C</a>', 'a/@id', 'x=\"2\"', 'first') xml; --> <a>A</a><a x=\"2\" id=\"1\">B</a><a x=\"2\" id=\"2\">C</a>",
+		"args": "xml|xpath|insertion|pos"
+	},
+	{
+		"type": "function",
+		"signature": "xml_update(xml, xpath, replacement)",
+		"description": "Update nodes or attributes. The replacement should be valid (there is no check). If the replacement is NULL then the call equals to xml_remove(xml, path).",
+		"example": "select xml_update('<a>A</a><a id=\"1\">B</a><a id=\"2\">C</a>', 'a[2]', '<b>D</b>'); --> <a>A</a><b>D</b><a id=\"2\">C</a>\nselect xml_update('<a>A</a><a id=\"1\">B</a><a id=\"2\">C</a>', 'a/@id', '3'); --> <a>A</a><a id=\"3\">B</a><a id=\"3\">C</a>",
+		"args": "xml|xpath|replacement"
+	},
+	{
+		"type": "function",
+		"signature": "xml_remove(xml, xpath)",
+		"description": "Remove nodes or attributes.",
+		"example": "select xml_remove('<a>A</a><a id=\"1\">B</a><a id=\"2\">C</a>', 'a[2]'); --> <a>A</a><a id=\"2\">C</a>\nselect xml_remove('<a>A</a><a id=\"1\">B</a><a id=\"2\">C</a>', 'a/@id'); --> <a>A</a><a>B</a><a>C</a>",
+		"args": "xml|path"
+	},
+	{
+		"type": "module",
+		"signature": "xml_each(xml, xpath)",
+		"description": "Return node values as a table.",
+		"example": "select * from xml_each('<a>A</a><a>B</a><a>C</a>', 'a/text()'); --> 3 rows: A, B and C",
+		"args": "xml|path"
+	}
+]

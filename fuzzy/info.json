@@ -1,0 +1,8 @@
+{
+	"name": "fuzzy",
+	"brief": "Fuzzy-matching helpers",
+	"description": "Measure distance between two strings, compute phonetic string code and transliterate a string",
+	"version": "1.0.0",
+	"author": "Anton Zhiyanov (nalgeon), Ross Bayer, D. Richard Hipp",
+	"homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/fuzzy.md"
+}

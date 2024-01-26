@@ -1,0 +1,8 @@
+{
+	"name": "regexp",
+	"brief": "Enable simple regexp support",
+	"description": "The extension implements regexp function and operator.",
+	"version": "1.0.0",
+	"author": "D. Richard Hipp",
+	"homepage": "https://www3.sqlite.org/src/file?name=ext/misc/regexp.c"
+}

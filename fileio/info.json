@@ -1,0 +1,8 @@
+{
+	"name": "fileio",
+	"brief": "Reads and writes files on a disk",
+	"description": "Functions to read files and write to files on disk.",
+	"version": "1.0.0",
+	"author": "D. Richard Hipp",
+	"homepage": "https://sqlite.org/src/file/ext/misc/fileio.c"
+}

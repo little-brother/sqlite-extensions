@@ -1,0 +1,32 @@
+name: Auto summary
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+     - main
+    paths:
+      - '*/info.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Join all info files into one summary file
+      run: |
+        jq -s -r 'flatten' */info.json > summary.json
+                
+    - name: Commit changes
+      run: |
+        git config --global user.email "no-reply@github.com"
+        git config --global user.name "GitHub Actions"
+        git add summary.json
+        git commit -m "Update summary.json by action"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

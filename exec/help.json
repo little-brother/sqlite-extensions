@@ -1,0 +1,17 @@
+[
+	{
+		"type": "function",
+		"signature": "exec(command [, codepage = UTF32])",
+		"description": "Execute a command and return its output as the result.\nThe codepage is one of: ANSI, CP437, UTF7, UTF8, UTF16.\nIf the command starts from \"powershell\" and the codepage is empty then CP437 is applied.",
+		"example": "select exec('powershell Get-Content C:/data.txt', 'CP437');",
+		"args": "command|codepage"
+	},
+	{
+		"keyword": "exec",
+		"type": "module",
+		"signature": "exec(command [, codepage = UTF32])",
+		"description": "Execute a command and return its output as the result.\nThe codepage is one of: ANSI, CP437, UTF7, UTF8, UTF16.\nIf the command starts from 'powershell' and the codepage is empty then CP437 is applied.",
+		"example": "select * from exec('powershell Get-Content C:/data.txt', 'CP437'); -- each line as a row",
+		"args": "command|codepage"
+	}
+]

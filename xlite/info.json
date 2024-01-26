@@ -1,0 +1,8 @@
+{
+	"name": "xlite",
+	"brief": "Excel and ODS files as virtual tables",
+	"description": "Provides access to Excel(.xlsx, .xls) and ODS (.ods) spreadsheets as virtual tables.",
+	"version": "0.2.0",
+	"author": "Sergey Khabibullin (x2bool)",
+	"homepage": "https://github.com/x2bool/xlite"
+}

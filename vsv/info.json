@@ -1,0 +1,7 @@
+{
+	"name": "vsv",
+	"brief": "CSV files as virtual tables",
+	"description": "Provides access to CSV as virtual tables.",
+	"version": "1.0.0",
+	"author": "Keith Medcalf"
+}

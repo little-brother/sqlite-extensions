@@ -1,0 +1,51 @@
+[
+	{
+		"type": "function",
+		"signature": "md5(data)",
+		"description": "Calculate md5-checksum",
+		"example": "select md5('hello'); --> BLOB, 16b",
+		"args": "data"
+	},
+	{
+		"type": "function",
+		"signature": "sha1(data)",
+		"description": "Calculate sha1-checksum",
+		"example": "select sha1('hello'); --> BLOB, 20b",
+		"args": "data"
+	},
+	{
+		"type": "function",
+		"signature": "sha256(data)",
+		"description": "Calculate sha256-checksum",
+		"example": "select sha256('hello'); --> BLOB, 32b",
+		"args": "data"
+	},
+	{
+		"type": "function",
+		"signature": "sha384(data)",
+		"description": "Calculate sha384-checksum",
+		"example": "select sha1('hello'); --> BLOB, 40b",
+		"args": "data"
+	},
+	{
+		"type": "function",
+		"signature": "sha512(data)",
+		"description": "Calculate sha512-checksum",
+		"example": "select sha1('hello'); --> BLOB, 64b",
+		"args": "data"
+	},
+	{
+		"type": "function",
+		"signature": "encode(data, algo)",
+		"description": "Encode binary data into a textual representation using the specified algorithm: base32, base64, base85, hex and url.",
+		"example": "select encode('hello', 'base64'); --> aGVsbG8=\nselect encode('/hello?text=(ಠ_ಠ)', 'url'); --> %2Fhello%3Ft%3D%28%E0%B2%A0_%E0%B2%A0%29",
+		"args": "data|algo"
+	},
+	{
+		"type": "function",
+		"signature": "decode(text, algo)",
+		"description": "Decode binary data from a textual representation using the specified algorithm: base32, base64, base85, hex and url.",
+		"example": "select decode('aGVsbG8=', 'base64'); --> hello\nselect decode('%2Fhello%3Ft%3D%28%E0%B2%A0_%E0%B2%A0%29', 'url'); --> /hello?t=(ಠ_ಠ)",
+		"args": "text|algo"
+	}
+]

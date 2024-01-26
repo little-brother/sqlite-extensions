@@ -1,0 +1,9 @@
+[
+	{
+		"type": "function",
+		"signature": "regexp(pattern, str)",
+		"description": "Returns 1 if Str is matched to Pattern and returns 0 otherwise.\n\nThe following regular expression syntax is supported:\nX* - zero or more occurrences of X\nX+ - one or more occurrences of X\nX? - zero or one occurrences of X\nX{p,q} - between p and q occurrences of X\n(X) - match X\nX|Y - X or Y\n^X - X occurring at the beginning of the string\nX$ - X occurring at the end of the string\n. - Match any single character\n\\c - Character c where c is one of \\{}()[]|*+?.\n\\c - C-language escapes for c in afnrtv.  ex: \\t or \\n\n\\uXXXX - Where XXXX is exactly 4 hex digits, unicode value XXXX\n\\xXX - Where XX is exactly 2 hex digits, unicode value XX\n[abc] - Any single character from the set abc\n[^abc] - Any single character not in the set abc\n[a-z] - Any single character in the range a-z\n[^a-z] - Any single character not in the range a-z\n\\b - Word boundary\n\\w - Word character.  [A-Za-z0-9_]\n\\W - Non-word character\n\\d - Digit\n\\D - Non-digit\n\\s - Whitespace character\n\\S - Non-whitespace character\n\nThe following expressions are equivalent: <url REGEXP '^google.*'> and <regexp('^google.*', url)>",
+		"example": "select regexp('^google.*', 'google.com'); --> 1",
+		"args": "pattern|str"
+	}
+]

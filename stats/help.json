@@ -1,0 +1,77 @@
+[
+	{
+		"type": "function",
+		"signature": "median(x)",
+		"description": "Aggregate function to calculate median (50-th percentile)",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "percentile_25(x)",
+		"description": "Aggregate function to calculate 25-th percentile.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "percentile_75(x)",
+		"description": "Aggregate function to calculate 75-th percentile.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "percentile_90(x)",
+		"description": "Aggregate function to calculate 90-th percentile.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "percentile_95(x)",
+		"description": "Aggregate function to calculate 95-th percentile.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "percentile_99(x)",
+		"description": "Aggregate function to calculate 99-th percentile.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "percentile(x, perc)",
+		"description": "Aggregate function to calculate perc-th percentile.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "stddev(x)",
+		"description": "Aggregate function to sample standard deviation.",
+		"args": "x",
+		"alias": "stddev_samp"
+	},
+	{
+		"type": "function",
+		"signature": "stddev_pop(x)",
+		"description": "Aggregate function to population standard deviation.",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "variance(x)",
+		"description": "Aggregate function to sample variance.",
+		"args": "x",
+		"alias": "var_samp"
+	},
+	{
+		"type": "function",
+		"signature": "var_pop(x)",
+		"description": "Aggregate function to population variance.",
+		"args": "x"
+	},
+	{
+		"type": "module",
+		"signature": "generate_series ([, start [, end = Infinity [, step = 1]]])",
+		"description": "Generate a series of values, from start to stop with a step size of one.",
+		"example": "select * from generate_series(0, 100, 5); --> 21 rows with values from 0 to 100",
+		"args": "start|stop|step"
+	}
+]

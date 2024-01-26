@@ -1,0 +1,80 @@
+[
+	{
+		"type": "function",
+		"signature": "dlevenshtein(x, y)",
+		"description": "Calculate Damerau-Levenshtein distance. Only ASCII strings are supported.",
+		"example": "select dlevenshtein('awesome', 'aewsme'); --> 2",
+		"args": "x|y"
+	},
+	{
+		"type": "function",
+		"signature": "levenshtein(x, y)",
+		"description": "Calculate Levenshtein distance. Only ASCII strings are supported.",
+		"example": "select levenshtein('awesome', 'aewsme'); --> 3",
+		"args": "x|y"
+	},
+	{
+		"type": "function",
+		"signature": "hamming(x, y)",
+		"description": "Calculate Hamming distance. Only ASCII strings are supported.",
+		"example": "select hamming('awesome', 'aewsome'); --> 2",
+		"args": "x|y"
+	},
+	{
+		"type": "function",
+		"signature": "jaro_winkler(x, y)",
+		"description": " Calculate Jaro-Winkler distance. Only ASCII strings are supported.",
+		"example": "select jaro_winkler('awesome', 'aewsme'); --> 0.907",
+		"args": "x|y"
+	},
+	{
+		"type": "function",
+		"signature": "osa_distance(x, y)",
+		"description": "Calculate Optimal String Alignment distance. Only ASCII strings are supported.",
+		"example": "select osa_distance('awesome', 'aewsme'); --> 3",
+		"args": "x|y"
+	},
+	{
+		"type": "function",
+		"signature": "edit_distance(x, y)",
+		"description": "Calculate spellcheck edit distance. Only ASCII strings are supported.",
+		"example": "select edit_distance('awesome', 'aewsme'); --> 215",
+		"args": "x|y"
+	},
+	{
+		"type": "function",
+		"signature": "caverphone(x)",
+		"description": "Calculate caverphone code. Only ASCII strings are supported.",
+		"example": "select caverphone('awesome'); --> AWSM111111",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "phonetic_hash(x)",
+		"description": "Calculate spellcheck phonetic code. Only ASCII strings are supported.",
+		"example": "select phonetic_hash('awesome'); --> ABACAMA",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "soundex(x)",
+		"description": "Return soundex code. Only ASCII strings are supported.",
+		"example": "select soundex('awesome'); --> A250",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "rsoundex(x)",
+		"description": "Return refined Soundex code. Only ASCII strings are supported.",
+		"example": "select rsoundex('awesome'); --> A03080",
+		"args": "x"
+	},
+	{
+		"type": "function",
+		"signature": "translit(x)",
+		"description": "Convert the input string from UTF-8 into pure ASCII by converting all non-ASCII characters to some combination of characters
+in the ASCII subset.",
+		"example": "select translit('привет'); --> privet",
+		"args": "x"
+	}
+]

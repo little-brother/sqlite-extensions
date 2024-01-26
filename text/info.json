@@ -1,0 +1,8 @@
+{
+	"name": "text",
+	"brief": "Set of string functions",
+	"description": "Set of string functions, from slice, contains and count to split_part, trim and repeat.",
+	"version": "1.0.0",
+	"author": "Anton Zhiyanov (nalgeon)",
+	"homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/text.md"
+}
