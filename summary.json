@@ -1,0 +1,128 @@
+[
+  {
+    "name": "crypto",
+    "brief": "Hashing, encoding and decoding functions",
+    "description": "Hashing, encoding and decoding functions.",
+    "version": "1.0.0",
+    "author": "Anton Zhiyanov (nalgeon)",
+    "homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/crypto.md"
+  },
+  {
+    "name": "exec",
+    "brief": "Executes shell command and returns console output as result",
+    "description": "Executes shell command and returns console output as result.",
+    "version": "1.0.0",
+    "author": "little-brother",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/exec"
+  },
+  {
+    "name": "fileio",
+    "brief": "Reads and writes files on a disk",
+    "description": "Functions to read files and write to files on disk.",
+    "version": "1.0.0",
+    "author": "D. Richard Hipp",
+    "homepage": "https://sqlite.org/src/file/ext/misc/fileio.c"
+  },
+  {
+    "name": "fuzzy",
+    "brief": "Fuzzy-matching helpers",
+    "description": "Measure distance between two strings, compute phonetic string code and transliterate a string",
+    "version": "1.0.0",
+    "author": "Anton Zhiyanov (nalgeon), Ross Bayer, D. Richard Hipp",
+    "homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/fuzzy.md"
+  },
+  {
+    "name": "icu",
+    "brief": "Partial support for national symbols",
+    "description": "Add partial support for national symbols by redefinition lower and upper functions.",
+    "version": "1.0.0",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/icu"
+  },
+  {
+    "name": "inja",
+    "brief": "Mustache template parser",
+    "description": "Mustache jinia-like template parser. sqlite-gui uses it non-directly for scripting. Check Wiki for details.",
+    "version": "1.0.0",
+    "author": "little-brother",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/inja"
+  },
+  {
+    "name": "odbc",
+    "brief": "Access to data through ODBC interface",
+    "description": "The extension provides a way to work with any databases through ODBC interface.",
+    "version": "1.0.0",
+    "author": "little-brother",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/odbc"
+  },
+  {
+    "name": "ora",
+    "brief": "Some helper functions",
+    "description": "Some helper functions.",
+    "version": "1.0.0",
+    "author": "little-brother",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/ora"
+  },
+  {
+    "name": "regexp",
+    "brief": "Enable simple regexp support",
+    "description": "The extension implements regexp function and operator.",
+    "version": "1.0.0",
+    "author": "D. Richard Hipp",
+    "homepage": "https://www3.sqlite.org/src/file?name=ext/misc/regexp.c"
+  },
+  {
+    "name": "series",
+    "brief": "Simple sequence generator as a table",
+    "description": "One table-valued-function, that returns sequence of values.",
+    "version": "1.0.0",
+    "author": "D. Richard Hipp",
+    "homepage": "https://www3.sqlite.org/src/file?name=ext/misc/series.c"
+  },
+  {
+    "name": "stats",
+    "brief": "Common statistical functions",
+    "description": "Common statistical functions.",
+    "version": "1.0.0",
+    "author": "Liam Healy, Anton Zhiyanov (nalgeon)",
+    "homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/stats.md"
+  },
+  {
+    "name": "text",
+    "brief": "Set of string functions",
+    "description": "Set of string functions, from slice, contains and count to split_part, trim and repeat.",
+    "version": "1.0.0",
+    "author": "Anton Zhiyanov (nalgeon)",
+    "homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/text.md"
+  },
+  {
+    "name": "uuid",
+    "brief": "Functions for UUIDs",
+    "description": "Functions that handling RFC-4122 UUIDs.",
+    "version": "1.0.0",
+    "author": "D. Richard Hipp",
+    "homepage": "https://sqlite.org/src/file/ext/misc/uuid.c"
+  },
+  {
+    "name": "vsv",
+    "brief": "CSV files as virtual tables",
+    "description": "Provides access to CSV as virtual tables.",
+    "version": "1.0.0",
+    "author": "Keith Medcalf"
+  },
+  {
+    "name": "xlite",
+    "brief": "Excel and ODS files as virtual tables",
+    "description": "Provides access to Excel(.xlsx, .xls) and ODS (.ods) spreadsheets as virtual tables.",
+    "version": "0.2.0",
+    "author": "Sergey Khabibullin (x2bool)",
+    "homepage": "https://github.com/x2bool/xlite"
+  },
+  {
+    "name": "xml",
+    "brief": "Functions for manipulating XML",
+    "description": "Functions for managing XML content stored in an SQLite database as text. XPath 1.0 is used to obtain a data.",
+    "version": "1.0.0",
+    "author": "little-brother",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/xml"
+  }
+]
