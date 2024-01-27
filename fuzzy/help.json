@@ -72,8 +72,7 @@
 	{
 		"type": "function",
 		"signature": "translit(x)",
-		"description": "Convert the input string from UTF-8 into pure ASCII by converting all non-ASCII characters to some combination of characters
-in the ASCII subset.",
+		"description": "Convert the input string from UTF-8 into pure ASCII by converting all non-ASCII characters to some combination of characters in the ASCII subset.",
 		"example": "select translit('привет'); --> privet",
 		"args": "x"
 	}

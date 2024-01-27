@@ -72,8 +72,7 @@
 	{
 		"type": "function",
 		"signature": "text_count(str, other)",
-		"description": "Count how many times the `other` substring is contained in the original string.
-",
+		"description": "Count how many times the `other` substring is contained in the original string.",
 		"example": "select text_count('hello yellow', 'ello'); --> 2\nselect text_count('hello yellow', 'x') = 0; --> 0",
 		"args": "str|other"
 	},
