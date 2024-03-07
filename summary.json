@@ -50,7 +50,7 @@
     "name": "odbc",
     "brief": "Access to data through ODBC interface",
     "description": "The extension provides a way to work with any databases through ODBC interface.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "little-brother",
     "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/odbc"
   },
