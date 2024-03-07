@@ -1,14 +1,14 @@
 [
 	{
 		"type": "function",
-		"signature": "odbc_read(connectionString, query, target)",
-		"description": "Read data via ODBC from external source and write it to SQLite table. If the target table doesn't exist, it'll be created. Use 'TABLES' as the query to obtain a table list.",
+		"signature": "odbc_read(connectionString, queryOrTable, target)",
+		"description": "Read data via ODBC from external source and write it to SQLite table. If the target table doesn't exist, it'll be created. Use $TABLES and $TYPES as the second parameter to obtain a table list and support types.",
 		"example": "select odbc_read('Driver={Microsoft Text Driver (*.txt; *.csv)};Dbq=D:/csv/', 'select * from animals.csv', 'animals')",
 		"args": "connectionString|query|target"
 	},
 	{
-		"type": "module",
-		"signature": "odbc_write(query, connectionString, target)",
+		"type": "function",
+		"signature": "odbc_write(queryOrTable, connectionString, target)",
 		"description": "Upload the query resultset from SQLite to a remote database. The target table must exists.",
 		"example": "select odbc_write('select * from animals where family = \"Felidae\"', 'DSN=Zoo.mdb', 'cats')",
 		"args": "query|connectionString|target"
@@ -17,13 +17,19 @@
 		"type": "function",
 		"signature": "odbc_query(connectionString, query)",
 		"description": "Execute the query on a remote database e.g. to create or purge a table.",
-		"example": "select odbc_write('select * from animals where family = \"Felidae\"', 'DSN=Zoo.mdb', 'cats')",
+		"example": "select odbc_query('DSN=Zoo.mdb', 'create table zoo (name integer, name varchar(20))')",
 		"args": "connectionString|query"
 	},
 	{
-		"type": "function",
-		"signature": "odbc_dsn()",
-		"description": "Enum local DSNs and return them as json array: `{\"result\": [\"MyData\", \"Csv\", ...], ...}`",
-		"example": "select odbc_dsn()"
+		"type": "module",
+		"signature": "odbc_dsn",
+		"description": "Enum local DSNs",
+		"example": "select * from odbc_dsn"
+	},
+	{
+		"type": "module",
+		"signature": "odbc_table(connectionString, queryOrTable)",
+		"description": "The module to create a virtual table that assigned to a remote table or an query result.",
+		"example": "create virtual table mycustomers using odbc_table('Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=d:/db.mdb', 'select * from customers')"
 	}
 ]
