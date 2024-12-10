@@ -1,0 +1,10 @@
+[
+	{
+		"keyword": "parquet",
+		"type": "module",
+		"signature": "parquet(filepath)",
+		"description": "Create a virtual table for the parquet-file.",
+		"example": "create virtual table demo using parquet('demo.parquet');",
+		"args": "filepath"
+	}
+]

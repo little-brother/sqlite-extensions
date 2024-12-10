@@ -1,0 +1,8 @@
+{
+	"name": "parquet",
+	"brief": "Provides access to Apache Parquet-files",
+	"description": "Provides read-only access to Apache Parquet-files",
+	"version": "1.0.0",
+	"author": "little-brother",
+	"homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/parquet"
+}
