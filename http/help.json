@@ -1,0 +1,23 @@
+[
+	{
+		"type": "function",
+		"signature": "http_request(url, [method = GET [, headers [, body [, response_type [, as_blob]]])",
+		"description": "Make http request.\nThe method should be one of: GET, POST, DELETE, PUT, PATCH.\nThe response_type is one of: BODY (default), HEADERS, COOKIES, STATUS.\n\nThe headers for non-empty body is set as \"Content-Type: application/x-www-form-urlencoded\".\nUse HEAD-method to check that the url is alive.",
+		"example": "select http_request('httpbin.org/get');\nselect http_request('https://httpbin.org/post', 'POST', null,'a=10&b=100') x; --> form: a = 10, b = 100\nselect http_request('https://httpbin.org/post', 'POST', 'Content-Type: multipart/form-data\nboundary=AAABBBCCC','a=10&b=100') x; --> data: a=10&b=100",
+		"args": "url|method|headers|body|response_type"
+	},
+	{
+		"type": "function",
+		"signature": "http_timeouts(resolve_timeout, connect_timeout, send_timeout, receive_timeout)",
+		"description": "Set request timeouts in milliseconds. Default timeouts are 1000 (1 sec).",
+		"example": "select http_timeouts(100, 100, 100, 100);",
+		"args": "resolve_timeout|connect_timeout|send_timeout|receive_timeout"
+	},
+	{
+		"type": "function",
+		"signature": "http_encode(uri_component)",
+		"description": "Encode special characters in a URI component.",
+		"example": "select http_encode('абв'); --> %D0%B0%D0%B1%D0%B2",
+		"args": "uri_component"
+	}
+]
