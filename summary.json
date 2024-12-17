@@ -32,6 +32,14 @@
     "homepage": "https://github.com/nalgeon/sqlean/blob/main/docs/fuzzy.md"
   },
   {
+    "name": "http",
+    "brief": "Allows to make HTTP requests",
+    "description": "Allows to make HTTP requests.",
+    "version": "1.0.0",
+    "author": "little-brother",
+    "homepage": "https://github.com/little-brother/sqlite-extensions/blob/main/http"
+  },
+  {
     "name": "icu",
     "brief": "Partial support for national symbols",
     "description": "Add partial support for national symbols by redefinition lower and upper functions.",
